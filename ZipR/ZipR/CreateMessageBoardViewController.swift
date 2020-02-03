@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CreateMessageBoardDelegate {
+protocol CreateMessageBoardViewControllerDelegate {
     func postButtonWasTapped()
 }
 
@@ -17,7 +17,7 @@ class CreateMessageBoardViewController: UIViewController {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var descriptionTextView: UITextView!
 
-    var delegate: CreateMessageBoardDelegate?
+    var delegate: CreateMessageBoardViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class CreateMessageBoardViewController: UIViewController {
 
 
     @IBAction func postButtonTapped(_ sender: UIBarButtonItem) {
-
+        self.dismiss(animated: true, completion: nil)
     }
 
     /*

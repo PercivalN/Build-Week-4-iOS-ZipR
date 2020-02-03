@@ -20,6 +20,7 @@
 		BB05499B23E8A85200EF62AF /* DefaultTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499A23E8A85200EF62AF /* DefaultTabBarController.swift */; };
 		BB05499D23E8AC3700EF62AF /* CreateMessageBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499C23E8AC3700EF62AF /* CreateMessageBoardViewController.swift */; };
 		BB05499F23E8C10500EF62AF /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499E23E8C10500EF62AF /* DetailPostViewController.swift */; };
+		BB0549A323E8D7F100EF62AF /* PostTagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0549A223E8D7F100EF62AF /* PostTagTableViewController.swift */; };
 		C23784A42AEB87236E5E146D /* Pods_ZipR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F07FE403CAAF075EACC8329 /* Pods_ZipR.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		BB05499A23E8A85200EF62AF /* DefaultTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTabBarController.swift; sourceTree = "<group>"; };
 		BB05499C23E8AC3700EF62AF /* CreateMessageBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessageBoardViewController.swift; sourceTree = "<group>"; };
 		BB05499E23E8C10500EF62AF /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
+		BB0549A223E8D7F100EF62AF /* PostTagTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTagTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				BB05499A23E8A85200EF62AF /* DefaultTabBarController.swift */,
 				BB05499023E895F200EF62AF /* MessageBoardTableViewController.swift */,
 				BB05499C23E8AC3700EF62AF /* CreateMessageBoardViewController.swift */,
+				BB0549A223E8D7F100EF62AF /* PostTagTableViewController.swift */,
 				BB05499E23E8C10500EF62AF /* DetailPostViewController.swift */,
 				BB05499223E8962C00EF62AF /* MyRecentActivtyTableViewController.swift */,
 				BB05499423E8963E00EF62AF /* ProfileViewController.swift */,
@@ -214,6 +217,7 @@
 				BB05499123E895F200EF62AF /* MessageBoardTableViewController.swift in Sources */,
 				BB05499723E8965000EF62AF /* MessageBoardTableViewCell.swift in Sources */,
 				BB05499923E8965D00EF62AF /* MyRecentActivityTableViewCell.swift in Sources */,
+				BB0549A323E8D7F100EF62AF /* PostTagTableViewController.swift in Sources */,
 				BB05499B23E8A85200EF62AF /* DefaultTabBarController.swift in Sources */,
 				BB05497D23E8925100EF62AF /* AppDelegate.swift in Sources */,
 				BB05499D23E8AC3700EF62AF /* CreateMessageBoardViewController.swift in Sources */,
