@@ -18,9 +18,13 @@
 		BB05499523E8963E00EF62AF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499423E8963E00EF62AF /* ProfileViewController.swift */; };
 		BB05499723E8965000EF62AF /* MessageBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499623E8965000EF62AF /* MessageBoardTableViewCell.swift */; };
 		BB05499923E8965D00EF62AF /* MyRecentActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499823E8965D00EF62AF /* MyRecentActivityTableViewCell.swift */; };
+		C23784A42AEB87236E5E146D /* Pods_ZipR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F07FE403CAAF075EACC8329 /* Pods_ZipR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CE19F75551C3724DF359EA2 /* Pods-ZipR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipR.release.xcconfig"; path = "Target Support Files/Pods-ZipR/Pods-ZipR.release.xcconfig"; sourceTree = "<group>"; };
+		5F07FE403CAAF075EACC8329 /* Pods_ZipR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		796C28DF6171BF126851DC99 /* Pods-ZipR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipR.debug.xcconfig"; path = "Target Support Files/Pods-ZipR/Pods-ZipR.debug.xcconfig"; sourceTree = "<group>"; };
 		BB05497923E8925100EF62AF /* ZipR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB05497C23E8925100EF62AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB05497E23E8925100EF62AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,17 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23784A42AEB87236E5E146D /* Pods_ZipR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5BAD8C1A1387BBD9524091 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				796C28DF6171BF126851DC99 /* Pods-ZipR.debug.xcconfig */,
+				4CE19F75551C3724DF359EA2 /* Pods-ZipR.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BB05497023E8925100EF62AF = {
 			isa = PBXGroup;
 			children = (
 				BB05497B23E8925100EF62AF /* ZipR */,
 				BB05497A23E8925100EF62AF /* Products */,
+				0C5BAD8C1A1387BBD9524091 /* Pods */,
+				E51A11DBD837F3FB65E94280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +99,14 @@
 			path = ZipR;
 			sourceTree = "<group>";
 		};
+		E51A11DBD837F3FB65E94280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F07FE403CAAF075EACC8329 /* Pods_ZipR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +114,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB05498D23E8925400EF62AF /* Build configuration list for PBXNativeTarget "ZipR" */;
 			buildPhases = (
+				88B894203F74FF1683702C6A /* [CP] Check Pods Manifest.lock */,
 				BB05497523E8925100EF62AF /* Sources */,
 				BB05497623E8925100EF62AF /* Frameworks */,
 				BB05497723E8925100EF62AF /* Resources */,
@@ -147,6 +173,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88B894203F74FF1683702C6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZipR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB05497523E8925100EF62AF /* Sources */ = {
@@ -302,6 +353,7 @@
 		};
 		BB05498E23E8925400EF62AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 796C28DF6171BF126851DC99 /* Pods-ZipR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +371,7 @@
 		};
 		BB05498F23E8925400EF62AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CE19F75551C3724DF359EA2 /* Pods-ZipR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
