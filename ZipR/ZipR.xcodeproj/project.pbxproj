@@ -13,6 +13,11 @@
 		BB05498423E8925100EF62AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB05498223E8925100EF62AF /* Main.storyboard */; };
 		BB05498623E8925400EF62AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB05498523E8925400EF62AF /* Assets.xcassets */; };
 		BB05498923E8925400EF62AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB05498723E8925400EF62AF /* LaunchScreen.storyboard */; };
+		BB05499123E895F200EF62AF /* MessageBoardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499023E895F200EF62AF /* MessageBoardTableViewController.swift */; };
+		BB05499323E8962C00EF62AF /* MyRecentActivtyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499223E8962C00EF62AF /* MyRecentActivtyTableViewController.swift */; };
+		BB05499523E8963E00EF62AF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499423E8963E00EF62AF /* ProfileViewController.swift */; };
+		BB05499723E8965000EF62AF /* MessageBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499623E8965000EF62AF /* MessageBoardTableViewCell.swift */; };
+		BB05499923E8965D00EF62AF /* MyRecentActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499823E8965D00EF62AF /* MyRecentActivityTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		BB05498523E8925400EF62AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB05498823E8925400EF62AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB05498A23E8925400EF62AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB05499023E895F200EF62AF /* MessageBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoardTableViewController.swift; sourceTree = "<group>"; };
+		BB05499223E8962C00EF62AF /* MyRecentActivtyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecentActivtyTableViewController.swift; sourceTree = "<group>"; };
+		BB05499423E8963E00EF62AF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BB05499623E8965000EF62AF /* MessageBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoardTableViewCell.swift; sourceTree = "<group>"; };
+		BB05499823E8965D00EF62AF /* MyRecentActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecentActivityTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,11 @@
 				BB05497C23E8925100EF62AF /* AppDelegate.swift */,
 				BB05497E23E8925100EF62AF /* SceneDelegate.swift */,
 				BB05498023E8925100EF62AF /* ViewController.swift */,
+				BB05499023E895F200EF62AF /* MessageBoardTableViewController.swift */,
+				BB05499223E8962C00EF62AF /* MyRecentActivtyTableViewController.swift */,
+				BB05499423E8963E00EF62AF /* ProfileViewController.swift */,
+				BB05499623E8965000EF62AF /* MessageBoardTableViewCell.swift */,
+				BB05499823E8965D00EF62AF /* MyRecentActivityTableViewCell.swift */,
 				BB05498223E8925100EF62AF /* Main.storyboard */,
 				BB05498523E8925400EF62AF /* Assets.xcassets */,
 				BB05498723E8925400EF62AF /* LaunchScreen.storyboard */,
@@ -138,7 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB05499523E8963E00EF62AF /* ProfileViewController.swift in Sources */,
+				BB05499323E8962C00EF62AF /* MyRecentActivtyTableViewController.swift in Sources */,
+				BB05499123E895F200EF62AF /* MessageBoardTableViewController.swift in Sources */,
 				BB05498123E8925100EF62AF /* ViewController.swift in Sources */,
+				BB05499723E8965000EF62AF /* MessageBoardTableViewCell.swift in Sources */,
+				BB05499923E8965D00EF62AF /* MyRecentActivityTableViewCell.swift in Sources */,
 				BB05497D23E8925100EF62AF /* AppDelegate.swift in Sources */,
 				BB05497F23E8925100EF62AF /* SceneDelegate.swift in Sources */,
 			);
