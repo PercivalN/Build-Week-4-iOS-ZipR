@@ -72,7 +72,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" image="pencil.and.ellipsis.rectangle" catalog="system"/>
                                                     <connections>
-                                                        <segue destination="rJl-Wj-kKv" kind="presentation" id="e0u-5A-A5k"/>
+                                                        <segue destination="rJl-Wj-kKv" kind="presentation" identifier="ModalCommentSegue" id="e0u-5A-A5k"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -87,6 +87,10 @@
                                         <constraint firstItem="GQ5-9i-T27" firstAttribute="leading" secondItem="vfY-Ea-ZLu" secondAttribute="leadingMargin" id="iSV-xj-h3y"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="ad6-Vz-cYl" id="yoe-Qy-Ic6"/>
+                                    <outlet property="commentNumberLabel" destination="eeG-lJ-2Jb" id="ver-8b-vuc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -98,34 +102,72 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLm-0l-Fst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="556"/>
+            <point key="canvasLocation" x="3017" y="-362"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Message Board View Controller-->
         <scene sceneID="2kO-rt-mOf">
             <objects>
-                <viewController id="sKU-bl-Nrg" sceneMemberID="viewController">
+                <viewController id="sKU-bl-Nrg" customClass="CreateMessageBoardViewController" customModule="ZipR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i8N-NE-itP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ved-7M-gr5">
-                                <rect key="frame" x="170.66666666666666" y="410.66666666666669" width="73" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ON-el-Cbm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="New Message Board" id="eXj-zc-cqf">
+                                        <barButtonItem key="rightBarButtonItem" title="Post" id="PHO-ZQ-7r3">
+                                            <connections>
+                                                <action selector="postButtonTapped:" destination="sKU-bl-Nrg" id="kVV-pB-fko"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sba-KG-40B">
+                                <rect key="frame" x="20" y="126" width="374" height="672"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3x-OH-pfS">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5NS-RP-DOV">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="630"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpd-ea-Ewo">
+                                <rect key="frame" x="20" y="76" width="91" height="30"/>
+                                <state key="normal" title="Choose a tag"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ved-7M-gr5" firstAttribute="centerX" secondItem="i8N-NE-itP" secondAttribute="centerX" id="AkF-oI-wRw"/>
-                            <constraint firstItem="ved-7M-gr5" firstAttribute="centerY" secondItem="i8N-NE-itP" secondAttribute="centerY" id="ihm-eM-M1n"/>
+                            <constraint firstItem="0ON-el-Cbm" firstAttribute="top" secondItem="3zY-Z1-eSE" secondAttribute="top" id="4Ib-al-kbb"/>
+                            <constraint firstItem="3zY-Z1-eSE" firstAttribute="trailing" secondItem="sba-KG-40B" secondAttribute="trailing" constant="20" id="ENI-p2-kBC"/>
+                            <constraint firstItem="sba-KG-40B" firstAttribute="top" secondItem="cpd-ea-Ewo" secondAttribute="bottom" constant="20" id="Ohu-WL-xvt"/>
+                            <constraint firstItem="cpd-ea-Ewo" firstAttribute="top" secondItem="0ON-el-Cbm" secondAttribute="bottom" constant="20" id="RJG-P3-Iv7"/>
+                            <constraint firstItem="3zY-Z1-eSE" firstAttribute="bottom" secondItem="sba-KG-40B" secondAttribute="bottom" constant="10" id="TEG-YQ-Xcw"/>
+                            <constraint firstItem="cpd-ea-Ewo" firstAttribute="leading" secondItem="3zY-Z1-eSE" secondAttribute="leading" constant="20" id="bal-jl-I16"/>
+                            <constraint firstItem="0ON-el-Cbm" firstAttribute="trailing" secondItem="3zY-Z1-eSE" secondAttribute="trailing" id="rzL-gY-seS"/>
+                            <constraint firstItem="sba-KG-40B" firstAttribute="leading" secondItem="3zY-Z1-eSE" secondAttribute="leading" constant="20" id="we7-CX-U1V"/>
+                            <constraint firstItem="0ON-el-Cbm" firstAttribute="leading" secondItem="3zY-Z1-eSE" secondAttribute="leading" id="x3b-rh-Dtx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3zY-Z1-eSE"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="5NS-RP-DOV" id="jQh-LD-ez9"/>
+                        <outlet property="titleTextField" destination="R3x-OH-pfS" id="QoO-h6-zcn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0H-dx-nFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2337.68115942029" y="392.41071428571428"/>
+            <point key="canvasLocation" x="4220" y="-642"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="33H-oz-FLF">
@@ -152,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1p-sU-azy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2338" y="1099"/>
+            <point key="canvasLocation" x="4219" y="31"/>
         </scene>
         <!--Recent Activity-->
         <scene sceneID="0js-2Q-72a">
@@ -188,7 +230,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEb-vP-fcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="-362"/>
+            <point key="canvasLocation" x="3016" y="438"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5u4-fB-KLf">
@@ -217,12 +259,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neg-3e-MoN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2851" y="-362"/>
+            <point key="canvasLocation" x="3016" y="-1130"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Default Tab Bar Controller-->
         <scene sceneID="vPK-AP-Yvy">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RVG-5X-tbt" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RVG-5X-tbt" customClass="DefaultTabBarController" customModule="ZipR" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5aI-Z5-a9P">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

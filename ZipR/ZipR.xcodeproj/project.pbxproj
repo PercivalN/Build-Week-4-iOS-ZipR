@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BB05497D23E8925100EF62AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05497C23E8925100EF62AF /* AppDelegate.swift */; };
 		BB05497F23E8925100EF62AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05497E23E8925100EF62AF /* SceneDelegate.swift */; };
-		BB05498123E8925100EF62AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05498023E8925100EF62AF /* ViewController.swift */; };
 		BB05498423E8925100EF62AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB05498223E8925100EF62AF /* Main.storyboard */; };
 		BB05498623E8925400EF62AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB05498523E8925400EF62AF /* Assets.xcassets */; };
 		BB05498923E8925400EF62AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB05498723E8925400EF62AF /* LaunchScreen.storyboard */; };
@@ -18,6 +17,8 @@
 		BB05499523E8963E00EF62AF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499423E8963E00EF62AF /* ProfileViewController.swift */; };
 		BB05499723E8965000EF62AF /* MessageBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499623E8965000EF62AF /* MessageBoardTableViewCell.swift */; };
 		BB05499923E8965D00EF62AF /* MyRecentActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499823E8965D00EF62AF /* MyRecentActivityTableViewCell.swift */; };
+		BB05499B23E8A85200EF62AF /* DefaultTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499A23E8A85200EF62AF /* DefaultTabBarController.swift */; };
+		BB05499D23E8AC3700EF62AF /* CreateMessageBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05499C23E8AC3700EF62AF /* CreateMessageBoardViewController.swift */; };
 		C23784A42AEB87236E5E146D /* Pods_ZipR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F07FE403CAAF075EACC8329 /* Pods_ZipR.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +29,6 @@
 		BB05497923E8925100EF62AF /* ZipR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB05497C23E8925100EF62AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB05497E23E8925100EF62AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB05498023E8925100EF62AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB05498323E8925100EF62AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB05498523E8925400EF62AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB05498823E8925400EF62AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		BB05499423E8963E00EF62AF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BB05499623E8965000EF62AF /* MessageBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoardTableViewCell.swift; sourceTree = "<group>"; };
 		BB05499823E8965D00EF62AF /* MyRecentActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecentActivityTableViewCell.swift; sourceTree = "<group>"; };
+		BB05499A23E8A85200EF62AF /* DefaultTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTabBarController.swift; sourceTree = "<group>"; };
+		BB05499C23E8AC3700EF62AF /* CreateMessageBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessageBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				796C28DF6171BF126851DC99 /* Pods-ZipR.debug.xcconfig */,
 				4CE19F75551C3724DF359EA2 /* Pods-ZipR.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,8 +86,9 @@
 			children = (
 				BB05497C23E8925100EF62AF /* AppDelegate.swift */,
 				BB05497E23E8925100EF62AF /* SceneDelegate.swift */,
-				BB05498023E8925100EF62AF /* ViewController.swift */,
+				BB05499A23E8A85200EF62AF /* DefaultTabBarController.swift */,
 				BB05499023E895F200EF62AF /* MessageBoardTableViewController.swift */,
+				BB05499C23E8AC3700EF62AF /* CreateMessageBoardViewController.swift */,
 				BB05499223E8962C00EF62AF /* MyRecentActivtyTableViewController.swift */,
 				BB05499423E8963E00EF62AF /* ProfileViewController.swift */,
 				BB05499623E8965000EF62AF /* MessageBoardTableViewCell.swift */,
@@ -207,10 +209,11 @@
 				BB05499523E8963E00EF62AF /* ProfileViewController.swift in Sources */,
 				BB05499323E8962C00EF62AF /* MyRecentActivtyTableViewController.swift in Sources */,
 				BB05499123E895F200EF62AF /* MessageBoardTableViewController.swift in Sources */,
-				BB05498123E8925100EF62AF /* ViewController.swift in Sources */,
 				BB05499723E8965000EF62AF /* MessageBoardTableViewCell.swift in Sources */,
 				BB05499923E8965D00EF62AF /* MyRecentActivityTableViewCell.swift in Sources */,
+				BB05499B23E8A85200EF62AF /* DefaultTabBarController.swift in Sources */,
 				BB05497D23E8925100EF62AF /* AppDelegate.swift in Sources */,
+				BB05499D23E8AC3700EF62AF /* CreateMessageBoardViewController.swift in Sources */,
 				BB05497F23E8925100EF62AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
