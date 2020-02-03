@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9518B93123E89DF900843E7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9518B93023E89DF900843E7C /* GoogleService-Info.plist */; };
+		9518B93323E8A81600843E7C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518B93223E8A81600843E7C /* Post.swift */; };
+		9518B93723E8CF0D00843E7C /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518B93623E8CF0D00843E7C /* PostController.swift */; };
 		BB05497D23E8925100EF62AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05497C23E8925100EF62AF /* AppDelegate.swift */; };
 		BB05497F23E8925100EF62AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05497E23E8925100EF62AF /* SceneDelegate.swift */; };
 		BB05498123E8925100EF62AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB05498023E8925100EF62AF /* ViewController.swift */; };
@@ -25,6 +28,9 @@
 		4CE19F75551C3724DF359EA2 /* Pods-ZipR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipR.release.xcconfig"; path = "Target Support Files/Pods-ZipR/Pods-ZipR.release.xcconfig"; sourceTree = "<group>"; };
 		5F07FE403CAAF075EACC8329 /* Pods_ZipR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		796C28DF6171BF126851DC99 /* Pods-ZipR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipR.debug.xcconfig"; path = "Target Support Files/Pods-ZipR/Pods-ZipR.debug.xcconfig"; sourceTree = "<group>"; };
+		9518B93023E89DF900843E7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9518B93223E8A81600843E7C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		9518B93623E8CF0D00843E7C /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		BB05497923E8925100EF62AF /* ZipR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB05497C23E8925100EF62AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB05497E23E8925100EF62AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +64,6 @@
 				796C28DF6171BF126851DC99 /* Pods-ZipR.debug.xcconfig */,
 				4CE19F75551C3724DF359EA2 /* Pods-ZipR.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +90,8 @@
 			children = (
 				BB05497C23E8925100EF62AF /* AppDelegate.swift */,
 				BB05497E23E8925100EF62AF /* SceneDelegate.swift */,
+				9518B93223E8A81600843E7C /* Post.swift */,
+				9518B93623E8CF0D00843E7C /* PostController.swift */,
 				BB05498023E8925100EF62AF /* ViewController.swift */,
 				BB05499023E895F200EF62AF /* MessageBoardTableViewController.swift */,
 				BB05499223E8962C00EF62AF /* MyRecentActivtyTableViewController.swift */,
@@ -94,6 +101,7 @@
 				BB05498223E8925100EF62AF /* Main.storyboard */,
 				BB05498523E8925400EF62AF /* Assets.xcassets */,
 				BB05498723E8925400EF62AF /* LaunchScreen.storyboard */,
+				9518B93023E89DF900843E7C /* GoogleService-Info.plist */,
 				BB05498A23E8925400EF62AF /* Info.plist */,
 			);
 			path = ZipR;
@@ -118,6 +126,7 @@
 				BB05497523E8925100EF62AF /* Sources */,
 				BB05497623E8925100EF62AF /* Frameworks */,
 				BB05497723E8925100EF62AF /* Resources */,
+				3BF723D115B9B9545D7B8568 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9518B93123E89DF900843E7C /* GoogleService-Info.plist in Resources */,
 				BB05498923E8925400EF62AF /* LaunchScreen.storyboard in Resources */,
 				BB05498623E8925400EF62AF /* Assets.xcassets in Resources */,
 				BB05498423E8925100EF62AF /* Main.storyboard in Resources */,
@@ -175,6 +185,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3BF723D115B9B9545D7B8568 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZipR/Pods-ZipR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZipR/Pods-ZipR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZipR/Pods-ZipR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		88B894203F74FF1683702C6A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,9 +235,11 @@
 				BB05499323E8962C00EF62AF /* MyRecentActivtyTableViewController.swift in Sources */,
 				BB05499123E895F200EF62AF /* MessageBoardTableViewController.swift in Sources */,
 				BB05498123E8925100EF62AF /* ViewController.swift in Sources */,
+				9518B93723E8CF0D00843E7C /* PostController.swift in Sources */,
 				BB05499723E8965000EF62AF /* MessageBoardTableViewCell.swift in Sources */,
 				BB05499923E8965D00EF62AF /* MyRecentActivityTableViewCell.swift in Sources */,
 				BB05497D23E8925100EF62AF /* AppDelegate.swift in Sources */,
+				9518B93323E8A81600843E7C /* Post.swift in Sources */,
 				BB05497F23E8925100EF62AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ZipR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ZipR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
