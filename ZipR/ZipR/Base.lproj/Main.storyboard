@@ -10,14 +10,21 @@
         <!--My Feed-->
         <scene sceneID="dLq-gI-MWi">
             <objects>
-                <tableViewController id="sWR-SP-cfJ" sceneMemberID="viewController">
+                <tableViewController id="sWR-SP-cfJ" customClass="MessageBoardTableViewController" customModule="ZipR" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hzi-aL-T80">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="kzD-sg-CFn">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="hyS-d2-dDT"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ne7-3r-pOZ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageBoardCell" id="Ne7-3r-pOZ" customClass="MessageBoardTableViewCell" customModule="ZipR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ne7-3r-pOZ" id="vfY-Ea-ZLu">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -39,14 +46,21 @@
         <!--Recent Activity-->
         <scene sceneID="0js-2Q-72a">
             <objects>
-                <tableViewController id="z46-ju-bC5" sceneMemberID="viewController">
+                <tableViewController id="z46-ju-bC5" customClass="MyRecentActivtyTableViewController" customModule="ZipR" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ghG-Nj-lFi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="UmY-lg-MmI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="U5J-dV-1mb"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2py-Zs-jQL">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecentActivityCell" id="2py-Zs-jQL" customClass="MyRecentActivityTableViewCell" customModule="ZipR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2py-Zs-jQL" id="FOg-L8-82x">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -68,18 +82,31 @@
         <!--Profile-->
         <scene sceneID="5u4-fB-KLf">
             <objects>
-                <viewController id="4Y6-uT-s2s" sceneMemberID="viewController">
+                <viewController id="4Y6-uT-s2s" customClass="ProfileViewController" customModule="ZipR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZMW-nU-1Gr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpz-2A-QUl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="THN-Dc-Fl0"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vpz-2A-QUl" firstAttribute="trailing" secondItem="yHr-zp-PTQ" secondAttribute="trailing" id="6Oh-Ip-UnT"/>
+                            <constraint firstItem="vpz-2A-QUl" firstAttribute="leading" secondItem="yHr-zp-PTQ" secondAttribute="leading" id="MiB-CZ-Rqf"/>
+                            <constraint firstItem="vpz-2A-QUl" firstAttribute="top" secondItem="yHr-zp-PTQ" secondAttribute="top" id="mjg-Uk-Dua"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yHr-zp-PTQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="mjt-gM-QWu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neg-3e-MoN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2688" y="378"/>
+            <point key="canvasLocation" x="2687" y="394"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vPK-AP-Yvy">
