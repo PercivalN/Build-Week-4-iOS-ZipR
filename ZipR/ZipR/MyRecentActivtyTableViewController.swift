@@ -13,8 +13,6 @@ class MyRecentActivtyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Recent Activity"
-
     }
 
     // MARK: - Table view data source
