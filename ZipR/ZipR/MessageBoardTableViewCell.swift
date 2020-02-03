@@ -10,15 +10,15 @@ import UIKit
 
 class MessageBoardTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    // MARK: - IBOutlets
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @IBOutlet private weak var authorLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var commentNumberLabel: UILabel!
 
-        // Configure the view for the selected state
+
+    private func updateViews() {
+        
     }
 
 }

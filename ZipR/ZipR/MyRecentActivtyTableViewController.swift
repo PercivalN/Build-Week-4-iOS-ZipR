@@ -10,6 +10,7 @@ import UIKit
 
 class MyRecentActivtyTableViewController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,15 +28,16 @@ class MyRecentActivtyTableViewController: UITableViewController {
         return 0
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecentActivityCell", for: indexPath) as? MyRecentActivityTableViewCell else {
+            return UITableViewCell()
+        }
+
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
